@@ -1,0 +1,38 @@
+<view>
+  <view class="hello">{{msg}}</view>
+
+  <input value="{{msg}}" bindinput='infoChange' />
+  <button bindtap='changeMsg'>改变</button>
+
+  <view class="outer" bindtap='handle1'>
+    <view class="inner" catchtap='handle2'></view>
+  </view>
+
+  <view wx:for='{{list}}' wx:for-index='index' wx:for-item='user' wx:key='{{user.id}}'>
+    <view bindtap='userTap' data-index='{{index}}' data-user='{{user}}'>
+      <text>{{index}}</text>
+      <text>--</text>
+      <text>{{user.id}}</text>
+      <text>--</text>
+      <text>{{user.name}}</text>
+    </view>
+  </view>
+
+  <view>
+    <view wx:if='{{idx==1}}'>aaaaaaaa</view>
+    <view wx:elif='{{idx==2}}'>bbbbbbbb</view>
+    <view wx:else>cccccccc</view>
+  </view>
+
+  <view class="tab" bindtap='changeLang'>
+    <text class="{{lang=='1' && 'on'}}" data-lang='1'>中文</text>
+    <text class="{{lang=='2' && 'on'}}" data-lang='2'>英文</text>
+    <text class="{{lang=='3' && 'on'}}" data-lang='3'>德语</text>
+  </view>
+
+  <view style='color:red;font-size:{{num}}rpx;'>
+    测试style
+  </view>
+
+
+</view>

@@ -1,0 +1,39 @@
+<view>
+  <!-- 获取与更新用户信息 -->
+  <image wx:if='{{src}}' class="me" mode="widthFix" src="{{src}}"></image>
+  <button wx:else open-type='getUserInfo' bindgetuserinfo='getUser'>获取用户信息</button>
+
+  <!-- Button的开放类型 -->
+  <button open-type='contact'>联系客服</button>
+  <button open-type='openSetting'>授权设置</button>
+  <button open-type='feedback'>意见反馈</button>
+
+  <!-- 获取手机号码 -->
+  <!-- 注意：目前该接口针对非个人开发者，且完成了认证的小程序开放（不包含海外主体）。需谨慎使用，若用户举报较多或被发现在不必要场景下使用，微信有权永久回收该小程序的该接口权限。 -->
+  <button open-type='getPhoneNumber' bindgetphonenumber='getPhoto'>获取手机号码</button>
+
+  <!-- 分享 -->
+  <button open-type='share'>我要分享赚钱</button>
+
+
+  <!-- 手动打开授权设置页面 -->
+  <button bindtap='setting'>授权设置</button>
+
+
+  <!-- 测试相机授权 -->
+  <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
+  <button type="primary" bindtap="takePhoto">拍照</button>
+  <view>预览</view>
+  <image mode="widthFix" src="{{src}}"></image>
+
+  <!-- 支付 -->
+  <button bindtap='buy'>立即支付</button>
+
+  <!-- 使用动画（一） -->
+  <view class='box' id='container'></view>
+  <button bindtap='startAnimation1'>开始你的动画</button>
+
+  <view class="block"></view>
+  <button bindtap='startAnimation2'>开始你的动画</button>
+
+</view>

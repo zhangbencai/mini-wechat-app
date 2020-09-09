@@ -1,0 +1,22 @@
+/* pages/user/user.wxss */
+.me {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 10rpx auto;
+}
+
+.box {
+  width: 300rpx;
+  height: 300rpx;
+  border: 1rpx solid red;
+  margin: 10rpx auto;
+}
+
+.block {
+  width: 300rpx;
+  height: 300rpx;
+  border: 1rpx solid blue;
+  margin: 10rpx auto;
+}

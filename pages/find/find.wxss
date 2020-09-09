@@ -1,0 +1,20 @@
+.hello {
+  font-size: 100rpx;
+  color: red;
+}
+
+.outer {
+  width: 500rpx;
+  height: 500rpx;
+  border: 1rpx solid red;
+}
+
+.inner {
+  width: 300rpx;
+  height: 300rpx;
+  border: 1rpx solid green;
+}
+
+.tab .on {
+  color: red;
+}
